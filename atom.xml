@@ -38,7 +38,7 @@
     <link href="http://yoursite.com/2015/10/27/Diary-10-27-15/"/>
     <id>http://yoursite.com/2015/10/27/Diary-10-27-15/</id>
     <published>2015-10-27T15:17:29.000Z</published>
-    <updated>2016-01-18T17:11:19.863Z</updated>
+    <updated>2016-01-18T17:23:56.734Z</updated>
     <content type="html"><![CDATA[<p>Rencently I found that I have many articles not classified in EverNote,more than 100 articles.<br>I wanna establish my own knowledge system,because Google always knows more than you. Information become knowledge only when you integrate it! Integrate information  including the curriculum itself, between the curriculums, as well as interdisciplinary knowledge integration, these are the most important, and reflect personal values.But I’m  far from that. I have study computer science for two years now, and I think I already have some ideas about the subject. It’s thime for me to try to intergrate the knowledge I have learned.</p>
 <p>I just finished the animation Bojeck horseman,use a word to discribe it: Absurd and unreasonable everywhere ,but always touching your heart.<br><strong>I will write a review if I have time.</strong></p>
 <p>Finally I finished my compiler principle experiment, but I still have other experiments on Wednesday and Thursday. ╮(╯▽╰)╭</p>
@@ -48,7 +48,7 @@
     <![CDATA[<p>Rencently I found that I have many articles not classified in EverNote,more than 100 articles.<br>I wanna establish my own knowledge syst]]>
     </summary>
     
-      <category term="Diary" scheme="http://yoursite.com/tags/Diary/"/>
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
     
   </entry>
   
@@ -78,11 +78,11 @@
   
   <entry>
     <title><![CDATA[Diary 10/21/15]]></title>
-    <link href="http://yoursite.com/2015/10/21/diary10-21-15/"/>
-    <id>http://yoursite.com/2015/10/21/diary10-21-15/</id>
+    <link href="http://yoursite.com/2015/10/21/Diary-10-21-15/"/>
+    <id>http://yoursite.com/2015/10/21/Diary-10-21-15/</id>
     <published>2015-10-21T13:50:26.000Z</published>
-    <updated>2016-01-18T17:11:06.323Z</updated>
-    <content type="html"><![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neueroscience for beginners V2.0</a><br>This blog serves as the notes repository for MOOC Neuroscience ventures which include notes about<br>the course SYNAPSES, NEURONS AND BRAIN. I just finished the course this month, and these notes helped me a lot. </p>
+    <updated>2016-01-18T17:24:43.644Z</updated>
+    <content type="html"><![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neuroscience for beginners V2.0</a><br>This blog serves as the notes repository for MOOC Neuroscience ventures which include notes about<br>the course SYNAPSES, NEURONS AND BRAIN. I just finished the course this month, and these notes helped me a lot. </p>
 <hr>
 <p>I have lots of programming experiment to do in the following few weeks. I think I will spend much more time in study than before because of my poor programming skills. Most of time I just don’t know where to start. So I decide to read some books about how to design programs and review the basic knowledge about C/C++ language.</p>
 <p>Here are some books&amp;articles I find today:</p>
@@ -91,10 +91,10 @@
 <p>And I think I should pay more attention to oprate system&amp;database princple. I just haven’t have chance to open these textbooks after class!</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neueroscience]]>
+    <![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neuroscience ]]>
     </summary>
     
-      <category term="Diary" scheme="http://yoursite.com/tags/Diary/"/>
+      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
     
       <category term="Inner_Man" scheme="http://yoursite.com/categories/Inner-Man/"/>
     
