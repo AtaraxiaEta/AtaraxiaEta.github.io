@@ -1,0 +1,751 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="一个在不断探索自我的小生命。" />
+
+
+
+  <meta name="keywords" content="Neuro," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="Introduce to a interesting website:Neurotic NeuronsThis website give us a simple and clear example of Hebbian Learning (a classical theory in nueroscience that propose by Donald Hebb in 1949), using a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hebbian Learning">
+<meta property="og:url" content="http://yoursite.com/2015/10/20/neuro/index.html">
+<meta property="og:site_name" content="失控的前额叶">
+<meta property="og:description" content="Introduce to a interesting website:Neurotic NeuronsThis website give us a simple and clear example of Hebbian Learning (a classical theory in nueroscience that propose by Donald Hebb in 1949), using a">
+<meta property="og:updated_time" content="2015-10-20T16:35:49.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hebbian Learning">
+<meta name="twitter:description" content="Introduce to a interesting website:Neurotic NeuronsThis website give us a simple and clear example of Hebbian Learning (a classical theory in nueroscience that propose by Donald Hebb in 1949), using a">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Hebbian Learning // 失控的前额叶 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">失控的前额叶</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Hebbian Learning
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-10-20T23:19:39+08:00" content="2015-10-20">
+            2015-10-20
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Inner-Man/" itemprop="url" rel="index"><span itemprop="name">Inner_Man</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/10/20/neuro/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/20/neuro/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>Introduce to a interesting website:<br><a href="http://ncase.me/neurons/?url_type=39&amp;object_type=webpage&amp;pos=1" target="_blank" rel="external">Neurotic Neurons</a><br>This website give us a simple and clear example of Hebbian Learning (a classical theory in nueroscience that propose by Donald Hebb in 1949), using a well designed interactive animation.</p>
+<p><em>The most important concept I wanted to introduce here was exposure therapy, which is part of Cognitive Behavioral Therapy. CBT is basically being mindful of your crappy neural connections, and gaining skills to retrain those connections.  –by author</em></p>
+<p>Part of the subtitles:</p>
+<pre><code><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">//
+//</span> MY FEARS <span class="pi">//
+//</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span>
+
+<span class="string">"fear0"</span>: <span class="string">"THIS is what happens."</span>,
+<span class="string">"fear1"</span>: <span class="string">"Innocent thoughts connect to anxious thoughts."</span>,
+<span class="string">"fear2"</span>: <span class="string">"Personally, I used to be so afraid of being seen as a failure,"</span>,
+<span class="string">"fear3"</span>: <span class="string">"of being close to people,"</span>,
+<span class="string">"fear4"</span>: <span class="string">"and of..."</span>,
+<span class="string">"fear5"</span>: <span class="string">"holes."</span>,
+<span class="string">"fear6"</span>: <span class="string">"Coz... I don't know why, but tightly clustered holes"</span>,
+<span class="string">"fear7"</span>: <span class="string">"just kinda creep me out, y'know? I dunno."</span>,
+
+<span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">//
+//</span> HEBBIAN LEARNING <span class="pi">//
+//</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span>
+
+<span class="string">"hebb0"</span>: <span class="string">"[SOUNDS]"</span>,
+<span class="string">"hebb1"</span>: <span class="string">"Anyway... how do we learn these fears in the first place?"</span>,
+<span class="string">"hebb2"</span>: <span class="string">"Well, to explain that, let me get rid of all this..."</span>,
+<span class="string">"hebb3"</span>: <span class="string">"and give you..."</span>,
+<span class="string">"hebb4"</span>: <span class="string">"this!"</span>,
+
+<span class="string">"hebb5"</span>: <span class="string">"Hebbian Learning."</span>,
+<span class="string">"hebb6"</span>: <span class="string">"“Neurons that fire together, wire together.”"</span>,
+
+<span class="string">"hebb7"</span>: <span class="string">"This is a rule of thumb that neuroscientists use to describe how"</span>,
+<span class="string">"hebb8"</span>: <span class="string">"neurons make new connections."</span>,
+<span class="string">"hebb9"</span>: <span class="string">"Basically, if you fire one neuron, then fire another neuron,"</span>,
+<span class="string">"hebb10"</span>: <span class="string">"the first neuron will connect TO the second neuron."</span>,
+<span class="string">"hebb11"</span>: <span class="string">"Try it out for yourself!"</span>,
+
+<span class="string">"hebb12"</span>: <span class="string">"Too slow! You didn't click fast enough. Try again?"</span>,
+<span class="string">"hebb13"</span>: <span class="string">"Not close enough. Try a different pair of neurons."</span>,
+
+<span class="string">"hebb14"</span>: <span class="string">"And that's how we learn!"</span>,
+<span class="string">"hebb15"</span>: <span class="string">"Of course, we don't learn that quickly in real life,"</span>,
+<span class="string">"hebb16"</span>: <span class="string">"I sped this simulation up, eh, but still."</span>,
+<span class="string">"hebb17"</span>: <span class="string">"Now play around, make a few more connections,"</span>,
+<span class="string">"hebb18"</span>: <span class="string">"maybe make a chain or something."</span>,
+
+<span class="string">"hebb19"</span>: <span class="string">"This learning rule is why, if you were bitten by a dog as a kid,"</span>,
+<span class="string">"hebb20"</span>: <span class="string">"you might develop a fear of dogs!"</span>,
+<span class="string">"hebb21"</span>: <span class="string">"Because your 'dog' neuron fired, then your 'pain' neuron fired."</span>,
+<span class="string">"hebb22"</span>: <span class="string">"And thus, 'dog' connected to 'pain'."</span>,
+
+<span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">///
+//</span> ANTI-HEBBIAN LEARNING <span class="pi">//
+//</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span><span class="pi">////</span>/
+
+<span class="string">"anti0"</span>: <span class="string">"Anyway, if that's how we learn, here's how we un-learn."</span>,
+
+<span class="string">"anti1"</span>: <span class="string">"Anti-Hebbian Learning."</span>,
+<span class="string">"anti2"</span>: <span class="string">"“Neurons that fire out of sync, lose their link.”"</span>,
+
+<span class="string">"anti3"</span>: <span class="string">"Another rule of thumb neuroscientists have!"</span>,
+
+<span class="string">"anti4"</span>: <span class="string">"So - if you already have a connection from one neuron to another,"</span>,
+<span class="string">"anti5"</span>: <span class="string">"and you fire the first neuron WITHOUT firing the second neuron,"</span>,
+<span class="string">"anti6"</span>: <span class="string">"the connection weakens."</span>,
+<span class="string">"anti7"</span>: <span class="string">"Again, try it out."</span>,
+
+<span class="string">"anti8"</span>: <span class="string">"That neuron didn't have any connections."</span>,
+<span class="string">"anti9"</span>: <span class="string">"You need to find one that's connected."</span>,
+<span class="string">"anti10"</span>: <span class="string">"Ah, so that neuron only has connections going TO it, but not FROM it."</span>,
+<span class="string">"anti11"</span>: <span class="string">"You need to find one that has connections FROM it."</span>,
+
+<span class="string">"anti12"</span>: <span class="string">"Now wait for it..."</span>,
+<span class="string">"anti13"</span>: <span class="string">"And look! The connection's weaker."</span>,
+<span class="string">"anti14"</span>: <span class="string">"Do that again, and this time, the connection will be totally killed."</span>,
+
+<span class="string">"anti15"</span>: <span class="string">"And this unlearning rule is why, if you have a fear of dogs,"</span>,
+<span class="string">"anti16"</span>: <span class="string">"and you're exposed to friendly dogs over and over again,"</span>,
+<span class="string">"anti17"</span>: <span class="string">"you might unlearn that fear."</span>,
+<span class="string">"anti18"</span>: <span class="string">"'Dog' neuron gets fired, WITHOUT the 'pain' neuron getting fired,"</span>,
+<span class="string">"anti19"</span>: <span class="string">"and therefore - the connection weakens."</span>,
+
+<span class="pi">////</span><span class="pi">////</span><span class="pi">////</span>/
+<span class="pi">// THERAPY //</span>
+<span class="pi">////</span><span class="pi">////</span><span class="pi">////</span>/
+
+<span class="string">"ther0"</span>: <span class="string">"So now that you know how we learn &amp; unlearn, let's revisit..."</span>,
+<span class="string">"ther1"</span>: <span class="string">"...this."</span>,
+
+<span class="string">"ther2"</span>: <span class="string">"I want you to re-train this brain."</span>,
+<span class="string">"ther3"</span>: <span class="string">"Rewire, reconnect each of these three things,"</span>,
+<span class="string">"ther4"</span>: <span class="string">"from feeling fear, to feeling safe."</span>,
+
+<span class="string">"ther5"</span>: <span class="string">"See, rewiring yourself may cause anxiety in the short term..."</span>,
+<span class="string">"ther6"</span>: <span class="string">"...but it is SO worth it in the long term."</span>,
+
+<span class="string">"ther7"</span>: <span class="string">"One down, two more to go."</span>,
+<span class="string">"ther8"</span>: <span class="string">"Two down, one more to go."</span>,
+<span class="string">"ther9"</span>: <span class="string">"i. still. don't. like. holes."</span>,
+
+<span class="string">"ther10"</span>: <span class="string">"And... you did it!"</span>,
+
+<span class="string">"ther11"</span>: <span class="string">"What you just did is called 'exposure therapy'."</span>,
+<span class="string">"ther12"</span>: <span class="string">"It's one of the most evidence-backed therapies out there"</span>,
+<span class="string">"ther13"</span>: <span class="string">"for treating specific phobias, PTSD, and other anxiety disorders."</span>,
+
+<span class="pi">////</span><span class="pi">////</span><span class="pi">///
+//</span> OUTRO <span class="pi">//
+//</span><span class="pi">////</span><span class="pi">////</span>/
+
+<span class="string">"outro0"</span>: <span class="string">"Again, in real life, rewiring yourself is not easy, it's not quick,"</span>,
+<span class="string">"outro1"</span>: <span class="string">"but it can be done."</span>,
+<span class="string">"outro2"</span>: <span class="string">"I promise you -- I'm proof --"</span>,
+<span class="string">"outro3"</span>: <span class="string">"It can be done."</span>
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Neuro/" rel="tag">#Neuro</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/21/diary10-21-15/" rel="prev">Diary 10/21/15</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/17/sayhello/" rel="next">Say Hello</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div id="disqus_thread">
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars3.githubusercontent.com/u/11269851?v=3&amp;u=4fb71813d0aadb31573b592afacde0c68e54664e&amp" alt="Ataraxia" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Ataraxia</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个在不断探索自我的小生命。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wangyuxiangxlwb" target="_blank">weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/95148578" target="_blank">douban</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ataraxia</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'sayhello2world';
+      var disqus_identifier = '2015/10/20/neuro/';
+      var disqus_title = 'Hebbian Learning';
+      var disqus_url = 'http://yoursite.com/2015/10/20/neuro/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
