@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-18T14:18:46.428Z</updated>
+  <updated>2016-01-19T02:39:15.088Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,36 +19,17 @@
     <link href="http://yoursite.com/2016/01/18/2016-01-18/"/>
     <id>http://yoursite.com/2016/01/18/2016-01-18/</id>
     <published>2016-01-18T13:19:50.000Z</published>
-    <updated>2016-01-18T14:18:46.428Z</updated>
-    <content type="html"><![CDATA[<p>之前因为英文写起来略麻烦，笔记本换了硬盘不能导致不能上传，旧硬盘数据不能及时导出，又碰上一大波考试来临就一直没有在自己搭好的博客上更新，从今天开始准备将内容大部分写为中文，直到我的英文水平达到中文表达能力的80%以上为止。</p>
+    <updated>2016-01-19T02:39:15.088Z</updated>
+    <content type="html"><![CDATA[<p>之前因为英文写起来略麻烦，笔记本换了硬盘导致不能上传，旧硬盘数据不能及时导出，又碰上一大波考试来临就一直没有在自己搭好的博客上更新，从今天开始准备将内容大部分写为中文，直到我的英文水平达到中文表达能力的80%以上为止。</p>
 <p>Anyway,在寒假开始的这个时候我的小博客又要开始更新啦~(≧▽≦)/~</p>
 <p><em>图片测试：</em><br><img src="http://i245.photobucket.com/albums/gg62/witchyhoy3/0a1bcvvvv/image2-8.png" alt=""></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>之前因为英文写起来略麻烦，笔记本换了硬盘不能导致不能上传，旧硬盘数据不能及时导出，又碰上一大波考试来临就一直没有在自己搭好的博客上更新，从今天开始准备将内容大部分写为中文，直到我的英文水平达到中文表达能力的80%以上为止。</p>
-<p>Anyway,在寒假开始的这个时候我]]>
+    <![CDATA[<p>之前因为英文写起来略麻烦，笔记本换了硬盘导致不能上传，旧硬盘数据不能及时导出，又碰上一大波考试来临就一直没有在自己搭好的博客上更新，从今天开始准备将内容大部分写为中文，直到我的英文水平达到中文表达能力的80%以上为止。</p>
+<p>Anyway,在寒假开始的这个时候我的小]]>
     </summary>
     
       <category term="uncategorized" scheme="http://yoursite.com/categories/uncategorized/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Diary 10/27/15]]></title>
-    <link href="http://yoursite.com/2015/10/27/Diary-10-27-15/"/>
-    <id>http://yoursite.com/2015/10/27/Diary-10-27-15/</id>
-    <published>2015-10-27T15:17:29.000Z</published>
-    <updated>2016-01-18T17:23:56.734Z</updated>
-    <content type="html"><![CDATA[<p>Rencently I found that I have many articles not classified in EverNote,more than 100 articles.<br>I wanna establish my own knowledge system,because Google always knows more than you. Information become knowledge only when you integrate it! Integrate information  including the curriculum itself, between the curriculums, as well as interdisciplinary knowledge integration, these are the most important, and reflect personal values.But I’m  far from that. I have study computer science for two years now, and I think I already have some ideas about the subject. It’s thime for me to try to intergrate the knowledge I have learned.</p>
-<p>I just finished the animation Bojeck horseman,use a word to discribe it: Absurd and unreasonable everywhere ,but always touching your heart.<br><strong>I will write a review if I have time.</strong></p>
-<p>Finally I finished my compiler principle experiment, but I still have other experiments on Wednesday and Thursday. ╮(╯▽╰)╭</p>
-<p>I have not finished The little Prince at present, so, Sun Fei, I have to update it later.</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Rencently I found that I have many articles not classified in EverNote,more than 100 articles.<br>I wanna establish my own knowledge syst]]>
-    </summary>
-    
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
     
   </entry>
   
@@ -71,30 +52,6 @@
       <category term="Cognitive" scheme="http://yoursite.com/tags/Cognitive/"/>
     
       <category term="Reflection" scheme="http://yoursite.com/tags/Reflection/"/>
-    
-      <category term="Inner_Man" scheme="http://yoursite.com/categories/Inner-Man/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Diary 10/21/15]]></title>
-    <link href="http://yoursite.com/2015/10/21/Diary-10-21-15/"/>
-    <id>http://yoursite.com/2015/10/21/Diary-10-21-15/</id>
-    <published>2015-10-21T13:50:26.000Z</published>
-    <updated>2016-01-18T17:24:43.644Z</updated>
-    <content type="html"><![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neuroscience for beginners V2.0</a><br>This blog serves as the notes repository for MOOC Neuroscience ventures which include notes about<br>the course SYNAPSES, NEURONS AND BRAIN. I just finished the course this month, and these notes helped me a lot. </p>
-<hr>
-<p>I have lots of programming experiment to do in the following few weeks. I think I will spend much more time in study than before because of my poor programming skills. Most of time I just don’t know where to start. So I decide to read some books about how to design programs and review the basic knowledge about C/C++ language.</p>
-<p>Here are some books&amp;articles I find today:</p>
-<p>How to design programs –MIT Press<br><em>The book introduces the concept of a design recipe, a six-step process for creating programs from the problem statement. While the book was originally used in conjunction with the TeachScheme! project (now ProgramByDesign), it has been adopted at a number of colleges and universities for the teaching of program design principles. –via Wikipedia </em><br>But I won’t read this book recently, because this is discussing about how to design programs using LISP language which different from C/C++/JAVA that I learned.</p>
-<p>And another book(or notes?) is 《设计模式精解–GoF 23种设计模式解析 附C++实现源码》<br>This book is more useful to me now.</p>
-<p>And I think I should pay more attention to oprate system&amp;database princple. I just haven’t have chance to open these textbooks after class!</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Share a blog about neuro&amp;brain.<br>Click–&gt;<a href="http://neuroscientist.weebly.com/" target="_blank" rel="external">Neuroscience ]]>
-    </summary>
-    
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
     
       <category term="Inner_Man" scheme="http://yoursite.com/categories/Inner-Man/"/>
     
